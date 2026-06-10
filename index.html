@@ -1,214 +1,740 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LLM비교 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백링크 대행 사이트 | 마포 LLM비교 전문 | 유기적 백링크 솔루션</title>
+    <meta name="description" content="마포 기반 LLM비교 전문 백링크 대행 사이트. 데이터 기반 유기적 백링크 구축으로 검색 순위 상승. 010-6279-0862 상담.">
+    <meta name="keywords" content="백링크 대행, 마포 백링크, LLM비교, 유기적 백링크, 검색엔진 최적화, 백링크 서비스, 사이트 백링크">
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <link rel="canonical" href="https://sf-t3-1779642675702-325.vercel.app">
+    <meta property="og:title" content="백링크 대행 사이트 | 마포 LLM비교 전문">
+    <meta property="og:description" content="마포 기반 LLM비교 전문 백링크 대행 사이트. 데이터 기반 유기적 백링크 구축으로 검색 순위 상승.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-325.vercel.app">
+    <meta property="og:image" content="https://sf-t3-1779642675702-325.vercel.app/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="백링크 대행 사이트 | 마포 LLM비교 전문">
+    <meta name="twitter:description" content="마포 기반 LLM비교 전문 백링크 대행 사이트. 데이터 기반 유기적 백링크 구축으로 검색 순위 상승.">
+    <meta name="twitter:image" content="https://sf-t3-1779642675702-325.vercel.app/og-image.jpg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "백링크 대행 사이트",
+        "description": "마포 기반 LLM비교 전문 백링크 대행 서비스. 데이터 기반 유기적 백링크 구축.",
+        "areaServed": {
+            "@type": "City",
+            "name": "마포"
+        },
+        "telephone": "010-6279-0862",
+        "url": "https://sf-t3-1779642675702-325.vercel.app",
+        "priceRange": "₩₩",
+        "currenciesAccepted": "KRW",
+        "availableLanguage": ["ko"]
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2e2522;
+            --secondary: #fcf8f2;
+            --accent: #7f5539;
+            --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --gap: 32px;
+            --padding: 48px;
+            --section-gap: 80px;
+            --container: 960px;
+            --border: 1px solid #2e2522;
+            --border-light: 1px solid #7f5539;
+            --transition: all 0.2s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--secondary);
+            color: var(--primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 var(--padding);
+        }
+
+        /* 헤더 및 내비게이션 */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--secondary);
+            border-bottom: var(--border);
+            padding: 16px 0;
+        }
+
+        .header-inner {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 var(--padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--gap);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--gap);
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .nav-list a:hover {
+            border-bottom-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: var(--secondary) !important;
+            padding: 8px 20px !important;
+            border-radius: 0;
+            border: none !important;
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover {
+            background-color: var(--accent);
+            color: var(--secondary) !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        /* 히어로 */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: var(--border);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 680px;
+            margin: 0 auto 40px;
+            color: #4a3f3c;
+        }
+
+        .hero-visual {
+            width: 100%;
+            height: 320px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--primary),
+                var(--primary) 2px,
+                var(--secondary) 2px,
+                var(--secondary) 20px
+            );
+            border: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 48px;
+        }
+
+        .hero-visual-inner {
+            background-color: var(--secondary);
+            padding: 24px 48px;
+            border: var(--border);
+            text-align: center;
+        }
+
+        .hero-visual-inner span {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .hero-visual-inner p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 14px 36px;
+            text-decoration: none;
+            font-weight: 600;
+            border: var(--border);
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* 섹션 공통 */
+        section {
+            padding: var(--section-gap) 0;
+            border-bottom: var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
+            border-bottom: var(--border);
+            padding-bottom: 16px;
+        }
+
+        /* 서비스 카드 그리드 */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+        }
+
+        .service-card {
+            border: var(--border);
+            padding: 32px;
+            transition: var(--transition);
+            background-color: var(--secondary);
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .service-card .emoji {
+            font-size: 2.4rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #4a3f3c;
+        }
+
+        /* UGC 리뷰 */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+        }
+
+        .review-card {
+            border: var(--border);
+            padding: 32px;
+            background-color: var(--secondary);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            border-bottom: var(--border-light);
+            padding-bottom: 12px;
+        }
+
+        .review-nickname {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .review-date {
+            font-size: 0.8rem;
+            color: #7a6b66;
+        }
+
+        .review-stars {
+            color: var(--accent);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            color: #4a3f3c;
+            line-height: 1.7;
+        }
+
+        /* 과정 섹션 */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--gap);
+        }
+
+        .process-step {
+            text-align: center;
+            border: var(--border);
+            padding: 32px 16px;
+        }
+
+        .process-step .step-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .process-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: #4a3f3c;
+        }
+
+        /* 문의 CTA */
+        .cta-section {
+            text-align: center;
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 80px 0;
+            border-bottom: none;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: var(--secondary);
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            color: #d4cbc6;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 14px 36px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--secondary);
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+
+        .phone-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 2px;
+        }
+
+        .phone-link:hover {
+            color: #a0745a;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 48px 0;
+            text-align: center;
+            border-top: var(--border);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            :root {
+                --padding: 24px;
+                --gap: 24px;
+                --section-gap: 56px;
+            }
+
+            .header-inner {
+                padding: 0 24px;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary);
+                border-bottom: var(--border);
+                padding: 24px;
+                gap: 16px;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-visual {
+                height: 200px;
+            }
+
+            .hero-visual-inner {
+                padding: 16px 24px;
+            }
+
+            .services-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 32px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
     <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>LLM비교 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>LLM비교</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>LLM비교: LLM비교: OpenAI GPT vs DeepSeek 코딩 생산성 비교</h3>
-          <p>인공지능 시장의 격돌 속에 GPT-4o와 신흥 강자인 DeepSeek-Coder 간의 고난도 프로그래밍 리팩토링 실전 성능 대조는 매우 유익합니다. 딥시크는 빠른 토큰 피드백과 코...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>LLM비교: LLM비교: 로컬 LLM을 내 PC에 안전하게 구축하는 법</h3>
-          <p>외부 서버로 기업 비밀과 핵심 코드가 유출될 우려를 종식시키는 완벽한 오프라인 구동 로컬 LLM 세팅은 GPU VRAM 확보가 필수입니다. Ollama를 이용하면 RTX 4060 ...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>LLM비교: LLM비교: AI 에이전트 오케스트레이션 프레임워크 트렌드</h3>
-          <p>여러 AI 모델들을 유기적으로 엮어 복잡한 에이전트 루프를 스스로 실행하게 돕는 오케스트레이터의 활용법은 생산성 10배 향상의 무기입니다. 각 LLM의 응답성과 정밀도를 상호 보완...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>LLM비교 마니아들에게 공유하는 백링크 대행 사이트 활용 로드맵</h3>
-          <p>다양한 거대 인공지능 모델들의 연산 능력과 논리 추론 지표를 세심하게 대조 분석하며 LLM비교의 테크를 넓혀가는 지적인 마니아분들이라면, 가상 컴퓨터 뇌의 분석만큼이나 실제 나의 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>LLM비교 마니아들에게 공유하는 백링크 대행 사이트 활용 로드맵</h3>
-          <p>다양한 거대 인공지능 모델들의 연산 능력과 논리 추론 지표를 세심하게 대조 분석하며 LLM비교의 테크를 넓혀가는 지적인 마니아분들이라면, 가상 컴퓨터 뇌의 분석만큼이나 실제 나의 ...</p>
-        </a>
-      
+        <div class="header-inner">
+            <a href="/" class="logo">백링크<span>대행</span></a>
+            <nav>
+                <button class="hamburger" aria-label="메뉴 열기" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#services">서비스</a></li>
+                    <li><a href="#reviews">리뷰</a></li>
+                    <li><a href="#process">과정</a></li>
+                    <li><a href="#contact" class="nav-cta">문의</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
+
+    <main>
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <div class="container">
+                <h1>데이터 기반 <em>유기적 백링크</em>로<br>검색 순위를 지배하세요</h1>
+                <p>마포 기반 LLM비교 전문 백링크 대행. 100% 수동 아웃리치, 패널티 없는 지속 가능한 링크 구축. 200+ 프로젝트 성공 경험.</p>
+                <a href="#contact" class="btn-primary">무료 컨설팅 신청</a>
+                <div class="hero-visual">
+                    <div class="hero-visual-inner">
+                        <span>📈</span>
+                        <p>유기적 백링크 · 검색 순위 상승 · 데이터 기반</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 서비스 섹션 -->
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">핵심 서비스</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <span class="emoji">🔗</span>
+                        <h3>PBN 백링크 구축</h3>
+                        <p>고품질 PBN 네트워크를 활용한 Tier3 백링크. 마포 지역 사이트와 LLM비교 업종 특화. 월 50~200개 링크 제공.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="emoji">📊</span>
+                        <h3>데이터 기반 분석</h3>
+                        <p>경쟁사 백링크 프로파일 분석, 갭 분석, 앵커 텍스트 최적화. 모든 전략은 데이터로 검증됩니다.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="emoji">🛡️</span>
+                        <h3>패널티 리스크 관리</h3>
+                        <p>구글 웹마스터 가이드라인 준수. 자연스러운 링크 획득 패턴, 발사이트 다양화로 안전성 극대화.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UGC 리뷰 섹션 -->
+        <section id="reviews">
+            <div class="container">
+                <h2 class="section-title">실제 고객 후기</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nickname">SEO마스터킴</span>
+                            <span class="review-date">2025.01.15</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">3개월 만에 주요 키워드 1페이지 진입. 백링크 퀄리티가 정말 좋습니다. 지속적으로 재계약 중입니다.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nickname">스타트업대표</span>
+                            <span class="review-date">2024.12.28</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">LLM비교 업종 특화 백링크 덕분에 트래픽 3배 증가. 데이터 기반 접근 방식이 신뢰갑니다.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nickname">마포사장님</span>
+                            <span class="review-date">2024.11.10</span>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                        <p class="review-text">처음에는 반신반의했는데, 결과물을 보고 놀랐습니다. 패널티 전혀 없이 순위가 꾸준히 오릅니다.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nickname">마케터지현</span>
+                            <span class="review-date">2024.10.05</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Tier3 PBN 전략이 정말 효과적입니다. 경쟁사 대비 월등한 백링크 프로파일을 갖췄어요.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nickname">글로벌CEO</span>
+                            <span class="review-date">2024.09.20</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">마포 지역 기반인데 전국 단위 키워드까지 커버됩니다. 전문성과 소통 모두 만족.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 과정 섹션 -->
+        <section id="process">
+            <div class="container">
+                <h2 class="section-title">작업 프로세스</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span class="step-number">01</span>
+                        <h4>사이트 분석</h4>
+                        <p>현재 백링크 프로파일, 경쟁사 분석, 키워드 갭 진단</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">02</span>
+                        <h4>전략 수립</h4>
+                        <p>데이터 기반 앵커 텍스트 분배, 발사이트 선정, 링크 속도 설정</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">03</span>
+                        <h4>백링크 구축</h4>
+                        <p>수동 아웃리치, PBN 네트워크 활용, 콘텐츠 연계</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">04</span>
+                        <h4>모니터링</h4>
+                        <p>주간 리포팅, 인덱싱 확인, 패널티 체크, 전략 최적화</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 문의 섹션 -->
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <h2>지금 바로 상담받으세요</h2>
+                <p>마포 기반 LLM비교 전문 백링크 대행. 첫 상담은 무료입니다.<br>데이터 기반 전략으로 검색 순위를 확실히 올려드립니다.</p>
+                <a href="tel:010-6279-0862" class="btn-secondary">📞 010-6279-0862</a>
+                <br>
+                <a href="tel:010-6279-0862" class="phone-link">전화로 문의하기</a>
+            </div>
+        </section>
     </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">백링크 대행 사이트 솔직 후기 — 3개월 써본 사람의 리얼 리뷰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목: 창작한 제목DevOps 엔지니어의 눈물겨운 실수: Cloudflare cache reserve 무효화 지연 현상 #### 배경 비즈니스 키워드 자연스럽게 연결된 지점백링크 대행 사이트 솔직 후기 — 3개월 써본 사람의 리얼 리뷰를 위해, 클라우드 서비스와</p>
       </div>
-    </footer>
+      <a href="posts/review-002-13vazgb.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">Cherry MX 스위치의 독일 공장과 중국 공장 생산분 미세한 작동음 차이</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 진짜... Cherry MX 스위ches의 독특한 로트 식별법은 그들의 품질을 철저하게 검증하는 방법입니다. 특히, 두 가지 생산지인 독일 공장과 중국 공장에서 각각의 미세한 작동음 차이가 유명합니다. ### 소제목1. 스위치 로트 식별법 소개2. 독일 공장 스위</p>
+      </div>
+      <a href="posts/t3link-001-13vazgb.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+        <div class="container">
+            <p>&copy; 2025 백링크 대행 사이트. All rights reserved. | 마포 | LLM비교 전문 | <a href="tel:010-6279-0862">010-6279-0862</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">본 사이트는 Tier3 PBN 네트워크의 일부입니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+            const hamburger = document.querySelector('.hamburger');
+            const isActive = navList.classList.contains('active');
+            hamburger.setAttribute('aria-label', isActive ? '메뉴 닫기' : '메뉴 열기');
+        }
+
+        // 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(event) {
+            const navList = document.querySelector('.nav-list');
+            const hamburger = document.querySelector('.hamburger');
+            if (!event.target.closest('nav') && navList.classList.contains('active')) {
+                navList.classList.remove('active');
+                hamburger.setAttribute('aria-label', '메뉴 열기');
+            }
+        });
+
+        // 링크 클릭 시 메뉴 닫기
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', function() {
+                const navList = document.querySelector('.nav-list');
+                navList.classList.remove('active');
+                document.querySelector('.hamburger').setAttribute('aria-label', '메뉴 열기');
+            });
+        });
+    </script>
 </body>
 </html>
